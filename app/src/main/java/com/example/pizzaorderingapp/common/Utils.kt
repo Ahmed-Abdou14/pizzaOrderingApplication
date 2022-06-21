@@ -1,0 +1,26 @@
+package com.example.pizzaorderingapp.common
+
+import android.content.Context
+import android.widget.Toast
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.LiveData
+import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
+
+
+fun displayMessage(context: Context, message: String) {
+    Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+}
+
+@Composable
+fun getCurrentRoute(navController: NavController): String? {
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    return navBackStackEntry?.destination?.route
+}
+/*
+//Todo Replace with Databse
+fun generateRandomData(): MutableList<ShoppingList> = mutableListOf<ShoppingList>(
+    ShoppingList(0, "Abdulahi", 10000.0),
+    ShoppingList(1,"10005",  60000.0),
+    ShoppingList(2,"10006",  10000.0))*/

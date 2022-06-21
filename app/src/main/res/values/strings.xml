@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PizzaOrderingApp</string>
+    <string name="pepperoni_pizza">pepperoni</string>
+    <string name="veggie_pizza">veggie</string>
+    <string name="margherita_pizza">margherita</string>
+    <string name="small_size">small</string>
+    <string name="medium_size">medium</string>
+    <string name="large_size">large</string>
+</resources>

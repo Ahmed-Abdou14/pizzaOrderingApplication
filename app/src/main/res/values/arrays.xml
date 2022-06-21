@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pepperoniSynonyms">
+        <item>pepperoni</item>
+        <item>pepperoni pizza</item>
+        <item>Pepperoni</item>
+        <item>Pepperoni pizza</item>
+        <item>meat</item>
+        <item>meat pizza</item>
+        <item>salami</item>
+        <item>salami pizza</item>
+    </string-array>
+    <string-array name="veggieSynonyms">
+        <item>veggie</item>
+        <item>veggie pizza</item>
+        <item>Veggie</item>
+        <item>Veggie pizza</item>
+        <item>Veji</item>
+        <item>Veji pizza</item>
+        <item>Veggi</item>
+        <item>Veggi pizza</item>
+        <item>vegetable</item>
+        <item>vegetable pizza</item>
+        <item>vegetarian</item>
+        <item>vegetarian pizza</item>
+        <item>vegan</item>
+        <item>vegan pizza</item>
+    </string-array>
+    <string-array name="margheritaSynonyms">
+        <item>margherita</item>
+        <item>margherita pizza</item>
+        <item>margreta</item>
+        <item>margreta pizza</item>
+        <item>margrita</item>
+        <item>margrita pizza</item>
+        <item>plain</item>
+        <item>plane</item>
+        <item>plain pizza</item>
+        <item>cheese</item>
+        <item>cheese pizza</item>
+    </string-array>
+
+    <string-array name="smallSizeSynonyms">
+        <item>small</item>
+        <item>small size</item>
+        <item>tiny</item>
+        <item>mini</item>
+        <item>cheapest</item>
+    </string-array>
+    <string-array name="mediumSizeSynonyms">
+        <item>medium</item>
+        <item>medium size</item>
+        <item>middle</item>
+        <item>default</item>
+        <item>mid size</item>
+    </string-array>
+    <string-array name="largeSizeSynonyms">
+        <item>large</item>
+        <item>large size</item>
+        <item>big</item>
+        <item>huge</item>
+        <item>mid size</item>
+    </string-array>
+</resources>
