@@ -13,20 +13,20 @@ import com.example.pizzaorderingapp.view.MainScreen
 
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import com.example.pizzaorderingapp.BiiIntents.ITEM_NAME
 import com.example.pizzaorderingapp.BiiIntents.ITEM_SIZE
 import okhttp3.*
 import java.io.BufferedReader
 import java.io.IOException
-import java.io.InputStreamReader
-import java.net.URL
+import kotlin.math.log
 
 class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        run("http://localhost:1111/?test=worked")
-
+        Log.d("MainActivity", "hi i am in constructor of %s")
+        run("http://localhost:5001/?y=y")
 
         setContent {
             PizzaOrderingAppTheme {
@@ -40,8 +40,6 @@ class MainActivity : ComponentActivity() {
 
     }
 
-
-    @RequiresApi(Build.VERSION_CODES.N)
     private fun Intent.handleIntent() {
         when (action) {
             // When the BII is matched, Intent.Action_VIEW will be used
@@ -51,12 +49,17 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
+
     private fun handleIntent(data: Uri?) {
         val itemName =  intent?.extras?.getString(ITEM_NAME)
-        val itemSize =  intent?.extras?.getString(ITEM_SIZE)
+        //val itemSize =  intent?.extras?.getString(ITEM_SIZE)
 
+        Log.d("MainActivity", "caught an intent %s")
+        if(itemName != null){
 
+        }
+
+        run("http://localhost:5001/?y=y")
 
     }
 

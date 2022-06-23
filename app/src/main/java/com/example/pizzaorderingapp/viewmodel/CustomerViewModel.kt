@@ -11,6 +11,8 @@ import com.example.pizzaorderingapp.data.local.entity.Pizza
 import com.example.pizzaorderingapp.data.repository.CustomerRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import okhttp3.*
+import java.io.IOException
 
 class CustomerViewModel(appContext: Application) : AndroidViewModel(appContext) {
 
@@ -62,7 +64,10 @@ class CustomerViewModel(appContext: Application) : AndroidViewModel(appContext) 
         }
     }
 
-    fun getPizzas(customerId: Int): LiveData<List<Pizza>> =
-        customerRepo.getPizzas(customerId)
+    fun getPizzas(customerId: Int): LiveData<List<Pizza>> {
+
+        return customerRepo.getPizzas(customerId)
+    }
+
 
 }

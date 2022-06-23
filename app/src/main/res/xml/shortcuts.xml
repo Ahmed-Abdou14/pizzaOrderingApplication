@@ -2,6 +2,64 @@
 <!-- This is a sample shortcuts.xml -->
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--pizza type shortcuts-->
+    <shortcut
+        android:shortcutId="pepperoni"
+        android:shortcutShortLabel="@string/pepperoni_pizza">
+        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+            <parameter-binding
+                android:key="menuItem.name"
+                android:value="@array/pepperoniSynonyms"/>
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="veggie"
+        android:shortcutShortLabel="@string/veggie_pizza">
+        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+            <parameter-binding
+                android:key="menuItem.name"
+                android:value="@array/veggieSynonyms"/>
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="margherita"
+        android:shortcutShortLabel="@string/margherita_pizza">
+        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+            <parameter-binding
+                android:key="menuItem.name"
+                android:value="@array/margheritaSynonyms"/>
+        </capability-binding>
+    </shortcut>
+
+<!--    &lt;!&ndash;pizza size shortcuts&ndash;&gt;
+    <shortcut
+        android:shortcutId="small"
+        android:shortcutShortLabel="@string/small_size">
+        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+            <parameter-binding
+                android:key="menuItem.menuItemSize"
+                android:value="@array/smallSizeSynonyms"/>
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="medium"
+        android:shortcutShortLabel="@string/medium_size">
+        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+            <parameter-binding
+                android:key="menuItem.menuItemSize"
+                android:value="@array/mediumSizeSynonyms"/>
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="large"
+        android:shortcutShortLabel="@string/large_size">
+        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+            <parameter-binding
+                android:key="menuItem.menuItemSize"
+                android:value="@array/largeSizeSynonyms"/>
+        </capability-binding>
+    </shortcut>-->
+
     <capability android:name="actions.intent.ORDER_MENU_ITEM">
         <intent
             android:action="android.intent.action.VIEW"
@@ -13,69 +71,33 @@
                 android:name="menuItem.name"
                 android:key="menuItemName"/>
 
-            <!-- Eg. menuItemName = "pizza" -->
-            <parameter
-                android:name="menuItem.size"
-                android:key="menuItemSize"/>
+            <!--<parameter
+                android:name="menuItem.menuItemSize"
+                android:key="menuItemSize"/>-->
 
         </intent>
     </capability>
 
-    <!--pizza type shortcuts-->
-    <shortcut
-        android:shortcutId="pepperoni_pizza"
-        android:shortcutShortLabel="@string/pepperoni_pizza">
-        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
-            <parameter-binding
-                android:key="menuItem.name"
-                android:value="@array/pepperoniSynonyms"/>
-        </capability-binding>
-    </shortcut>
-    <shortcut
-        android:shortcutId="veggie_pizza"
-        android:shortcutShortLabel="@string/veggie_pizza">
-        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
-            <parameter-binding
-                android:key="menuItem.name"
-                android:value="@array/veggieSynonyms"/>
-        </capability-binding>
-    </shortcut>
-    <shortcut
-        android:shortcutId="margherita_pizza"
-        android:shortcutShortLabel="@string/margherita_pizza">
-        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
-            <parameter-binding
-                android:key="menuItem.name"
-                android:value="@array/margheritaSynonyms"/>
-        </capability-binding>
-    </shortcut>
 
-    <!--pizza size shortcuts-->
+
+
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:targetPackage="com.example.pizzaorderingapp"
+            android:targetClass="com.example.pizzaorderingapp.MainActivity">
+            <parameter
+                android:name="feature"
+                android:key="featureParam"/>
+        </intent>
+    </capability>
+    <!-- Short and long labels must be @string resource. -->
     <shortcut
-        android:shortcutId="small"
-        android:shortcutShortLabel="@string/small_size">
-        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
+        android:shortcutId="open_app"
+        android:shortcutShortLabel="@string/open_app_label">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
             <parameter-binding
-                android:key="menuItem.size"
-                android:value="@array/smallSizeSynonyms"/>
-        </capability-binding>
-    </shortcut>
-    <shortcut
-        android:shortcutId="medium"
-        android:shortcutShortLabel="@string/medium_size">
-        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
-            <parameter-binding
-                android:key="menuItem.size"
-                android:value="@array/mediumSizeSynonyms"/>
-        </capability-binding>
-    </shortcut>
-    <shortcut
-        android:shortcutId="large"
-        android:shortcutShortLabel="@string/large_size">
-        <capability-binding android:key="actions.intent.ORDER_MENU_ITEM">
-            <parameter-binding
-                android:key="menuItem.size"
-                android:value="@array/largeSizeSynonyms"/>
+                android:value="featureParam"
+                android:key="feature"/>
         </capability-binding>
     </shortcut>
 </shortcuts>

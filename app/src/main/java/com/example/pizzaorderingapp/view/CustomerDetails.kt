@@ -25,11 +25,13 @@ import androidx.compose.ui.platform.LocalContext
 
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-
+import okhttp3.*
+import java.io.IOException
 
 //Todo add the navigation
 @Composable
 fun CustomerDetails( onPizzaEdit: () -> Unit) {
+
     val customerViewModel =
         viewModel<CustomerViewModel>(viewModelStoreOwner = LocalContext.current as ComponentActivity)
 
